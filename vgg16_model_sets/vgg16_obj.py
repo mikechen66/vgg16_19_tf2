@@ -9,12 +9,11 @@ AlexNet has no return value(or None). However, the outer function Vgg16() cna ca
 class (as a function) and then give the summary. 
 
 Very Deep Convolutional Networks for Large-Scale Image Recognition
-https://arxiv.org/abs/1409.1556) (ICLR 2015)
-
-https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPool2D
+ICLR 2015: https://arxiv.org/abs/1409.1556
 
 Keras code: 
 https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py
+
 Tensorflow code:  
 https://github.com/tensorflow/models/blob/master/research/slim/nets/vgg.py
 """

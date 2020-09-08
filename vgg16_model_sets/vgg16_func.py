@@ -8,12 +8,11 @@ It is a typical functional programming for the classical vgg16 model. Please not
 that it has the explicit return. 
 
 Very Deep Convolutional Networks for Large-Scale Image Recognition
-https://arxiv.org/abs/1409.1556) (ICLR 2015)
-
-https://www.tensorflow.org/api_docs/python/tf/keras/layers/MaxPool2D
+ICLR 2015: https://arxiv.org/abs/1409.1556
 
 Keras code: 
 https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py
+
 Tensorflow code:  
 https://github.com/tensorflow/models/blob/master/research/slim/nets/vgg.py
 """
