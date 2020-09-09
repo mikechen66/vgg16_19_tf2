@@ -47,7 +47,6 @@ class Vgg16(Sequential):
 
     # Adopt the static method to enbale the elegant realization of the model  
     @staticmethod
-    # -def build(width, height, depth, classes, reg=0.0002):
     def build(input_shape, num_classes):
 
         model = Sequential()
