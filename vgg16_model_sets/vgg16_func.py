@@ -4,8 +4,15 @@
 # vgg16_func.py
 
 """
-It is a typical functional programming for the classical vgg16 model. Please notify 
-that it has the explicit return. 
+It is a typical functional programming for the classical vgg16 model. Please notify that it 
+has the explicit return. 
+
+In addtion, it has a consolidated structure with the purely Tensorflow 2.x. We set the same 1000 
+class numbers. Users can use the typical dot syntax to call the VGG16 model. 
+
+According to the formula of Stanford cs231, W_output = (W-F+2P)/S + 1. W,F,P,S are input width, 
+filter width, padding size and stride. It is the apparent result of H_output = W_output since we 
+requires the square size of filters.
 
 Very Deep Convolutional Networks for Large-Scale Image Recognition
 ICLR 2015: https://arxiv.org/abs/1409.1556

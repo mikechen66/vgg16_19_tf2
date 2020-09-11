@@ -1,29 +1,17 @@
+
 #!/usr/bin/env python
 # coding: utf-8
 
-# alexnet_obj_return.py
+# vgg16_obj_return.py
 
 """
-The script is the self-consistent realization of object-oriented style of the AlexNet model with the 
-standand return value "return model". It is used the static method to replace the construction method
-"def __init__(self,...). Therefore it does not need any parameters including "self". It is the much
-elegant realization of the VGG16 model. 
+The script is the self-consistent realization of object-oriented programming  of the VGG16 model with 
+the explicit "return model" . It is used the static method to replace the construction method. So it 
+does not need any the special parameter variable  of self". It is an elegant realization. 
 
 In addtion, it has a consolidated structure with the purely Tensorflow 2.x. We set the same 1000 class 
-numbers. Please use the following call convention if users adopt any client script to call the AlexNet 
+numbers. Users can use the typical dot syntax to call the VGG16 model. 
 model.
-
-## 1. Delete the model, summary and arguments within the script of the AlexNet model.
-
-## 2. Add the constants in the client script.
-# IMAGE_WIDTH = 227
-# IMAGE_HEIGHT = 227
-# CHANNELS = 3
-# NUM_CLASSES = 1000
-## 3.Assign the vlaues in the client script.
-# INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
-##4. Use a client script to call the AlexNet model 
-# model = vgg16_obj_return.Vgg16.build(INPUT_SHAPE, NUM_CLASSES)
 
 According to the formula of Stanford cs231, W_output = (W-F+2P)/S + 1. W,F,P,S are input width, filter 
 width, padding size and stride respectively. It is the apparent result of H_output = W_output since we 
@@ -32,11 +20,14 @@ requires the square size of filters.
 Stanford c231n 
 https://cs231n.github.io/convolutional-networks/#conv
 
-AlexNet, Krizhevsky, Alex, Ilya Sutskever and Geoffrey E. Hinton, 2012
-https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf
+Very Deep Convolutional Networks for Large-Scale Image Recognition
+ICLR 2015: https://arxiv.org/abs/1409.1556
 
-Michael Guerzhoy and Davi Frossard, 2017, AlexNet implementation in TensorFlow, with weights Details: 
-http://www.cs.toronto.edu/~guerzhoy/tf_alexnet/
+Keras code: 
+https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py
+
+Tensorflow code:  
+https://github.com/tensorflow/models/blob/master/research/slim/nets/vgg.py
 """
 
 from tensorflow.keras.models import Sequential
