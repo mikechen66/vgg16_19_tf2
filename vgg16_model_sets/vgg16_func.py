@@ -75,9 +75,11 @@ IMAGE_HEIGHT = 227
 CHANNELS = 3
 NUM_CLASSES = 1000
 
+# Assign the vlaues 
+INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
 
-# Call the AlexNet model 
-model = vgg16((IMAGE_WIDTH,IMAGE_HEIGHT,CHANNELS), NUM_CLASSES)
+# Call the Vgg16  model 
+model = vgg16(INPUT_SHAPE, NUM_CLASSES)
 
 # show the full model structure of Vgg16 
 model.summary()

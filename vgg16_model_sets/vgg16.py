@@ -58,5 +58,5 @@ model.add(Dense(units=4096, activation="relu"))
 model.add(Dense(units=4096, activation="relu"))
 model.add(Dense(units=1000, activation="softmax"))
 
-
+# Show the Vgg16 model suymmary 
 model.summary()

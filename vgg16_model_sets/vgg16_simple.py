@@ -17,11 +17,14 @@ According to the formula of Stanford cs231, W_output = (W-F+2P)/S + 1. W,F,P,S a
 width, padding size and stride respectively. It is the apparent result of H_output = W_output since we 
 requires the square size of filters.
 
-Stanford c231n 
-https://cs231n.github.io/convolutional-networks/#conv
-
 Very Deep Convolutional Networks for Large-Scale Image Recognition
 ICLR 2015: https://arxiv.org/abs/1409.1556
+
+Keras code: 
+https://github.com/keras-team/keras-applications/blob/master/keras_applications/vgg16.py
+
+Tensorflow code:  
+https://github.com/tensorflow/models/blob/master/research/slim/nets/vgg.py
 """
 
 
@@ -88,9 +91,9 @@ NUM_CLASSES = 1000
 INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
 
 
-# Use the model to call the function of build() in the AlexNet class with the dot syntax
+# Use the model to call the function of build() in the Vgg16 class with the dot syntax
 model = Vgg16.build(INPUT_SHAPE, NUM_CLASSES)
 
-# Show the AlexNet Model 
+# Show the Vgg16 Model 
 model.summary()
 

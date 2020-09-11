@@ -23,13 +23,6 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Conv2D, Dense, Flatten, MaxPooling2D
 
 
-# Assign the constants 
-IMAGE_WIDTH = 227
-IMAGE_HEIGHT = 227
-CHANNELS = 3
-NUM_CLASSES = 1000
-
-
 # Define the VGG16 model 
 class Vgg16(Sequential):
 
@@ -71,8 +64,19 @@ class Vgg16(Sequential):
         self.add(Dense(units=num_classes, activation="softmax"))
 
 
-# Call the AlexNet model 
-model = Vgg16((IMAGE_WIDTH,IMAGE_HEIGHT,CHANNELS), NUM_CLASSES)
+# Assign the constants 
+IMAGE_WIDTH = 227
+IMAGE_HEIGHT = 227
+CHANNELS = 3
+NUM_CLASSES = 1000
+
+
+# Assign the vlaues 
+INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
+
+
+# Call the Vgg16  model 
+model = Vgg16(INPUT_SHAPE, NUM_CLASSES)
 
 # show the full model structure of Vgg16 
 model.summary()

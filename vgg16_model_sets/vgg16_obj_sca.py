@@ -70,8 +70,11 @@ if __name__ == '__main__':
     CHANNELS = 3
     NUM_CLASSES = 1000
 
-    # Call the AlexNet model 
-    model = Vgg16((IMAGE_WIDTH,IMAGE_HEIGHT,CHANNELS), NUM_CLASSES)
+    # Assign the vlaues 
+    INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
+
+    # Call the Vgg16 model 
+    model = Vgg16(INPUT_SHAPE, NUM_CLASSES)
 
     # show the full model structure of Vgg16 
     model.summary()

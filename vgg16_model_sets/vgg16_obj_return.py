@@ -90,8 +90,8 @@ NUM_CLASSES = 1000
 INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
 
 
-# Use the model to call the function of build() in the AlexNet class with the dot syntax
+# Use the model to call the function of build() in the Vgg16 class with the dot syntax
 model = Vgg16.build(INPUT_SHAPE, NUM_CLASSES)
 
-# Show the AlexNet Model 
+# Show the Vgg16 Model 
 model.summary()
