@@ -81,6 +81,7 @@ class Vgg16(Sequential):
 
 
 if __name__ == '__main__':  
+    
     # Assign the vlaues 
     input_shape = (227,227,3)
     num_classes = 1000
