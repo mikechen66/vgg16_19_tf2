@@ -83,18 +83,14 @@ class Vgg19(Sequential):
         return model
 
 
-# Provide the constants for the function. 
-IMAGE_WIDTH = 227
-IMAGE_HEIGHT = 227
-CHANNELS = 3
-NUM_CLASSES = 1000
+if __name__ == '__main__':
+    
+    # Assign the vlaues 
+    input_shape = (227,227,3)
+    num_classes = 1000
+    
+    # Use the model to call the function of build() in the Vgg19 class with the dot syntax
+    model = Vgg19().build(input_shape, num_classes)
 
-# Assign the vlaues 
-INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
-
-
-# Use the model to call the function of build() in the Vgg19 class with the dot syntax
-model = Vgg19.build(INPUT_SHAPE, NUM_CLASSES)
-
-# Show the Vgg19 Model 
-model.summary()
+    # Show the Vgg19 Model 
+    model.summary()
