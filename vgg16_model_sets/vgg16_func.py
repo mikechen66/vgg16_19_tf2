@@ -69,17 +69,14 @@ def vgg16(input_shape, num_classes):
  
     return model 
 
-# Provide the constants for the function. 
-IMAGE_WIDTH = 227
-IMAGE_HEIGHT = 227
-CHANNELS = 3
-NUM_CLASSES = 1000
 
-# Assign the vlaues 
-INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
+if __name__ == '__main__':  
+    # Assign the vlaues 
+    input_shape = (227,227,3)
+    num_classes = 1000
 
-# Call the Vgg16  model 
-model = vgg16(INPUT_SHAPE, NUM_CLASSES)
+    # Call the Vgg16  model 
+    model = vgg16(input_shape, num_classes)
 
-# show the full model structure of Vgg16 
-model.summary()
+    # show the full model structure of Vgg16 
+    model.summary()
