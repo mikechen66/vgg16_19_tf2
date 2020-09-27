@@ -70,7 +70,7 @@ if __name__ == '__main__':
     num_classes = 1000
 
     # Call the Vgg16  model 
-    model = vgg16(input_shape, num_classes)
+    model = Vgg16(input_shape, num_classes)
 
     # show the full model structure of Vgg16 
     model.summary()
