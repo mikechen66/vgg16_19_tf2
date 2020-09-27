@@ -66,18 +66,14 @@ class Vgg19(Sequential):
         self.add(Dense(units=num_classes, activation="softmax"))
 
 
-if __name__ == '__main__':
-
-    IMAGE_WIDTH = 227
-    IMAGE_HEIGHT = 227
-    CHANNELS = 3
-    NUM_CLASSES = 1000
-
+if __name__ == '__main__':  
+    
     # Assign the vlaues 
-    INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
+    input_shape = (227,227,3)
+    num_classes = 1000
 
-    # Call the Vgg19 model 
-    model = Vgg19(INPUT_SHAPE, NUM_CLASSES)
+    # Call the Vgg19  model 
+    model = vgg19(input_shape, num_classes)
 
-    # show the full model structure of the Vgg19 
+    # show the full model structure of Vgg16 
     model.summary()
