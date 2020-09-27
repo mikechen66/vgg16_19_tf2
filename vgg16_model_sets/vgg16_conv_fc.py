@@ -145,6 +145,7 @@ if __name__ == '__main__':
     exclude_fc = True
 
     # Call the function of build() in the Vgg16 class with the dot syntax
+    # -model = Vgg16().build(input_shape, num_classes, exclude_fc)
     conv_base = Vgg16().build(input_shape, num_classes, exclude_fc)
 
     # Show the Vgg16 Model 
