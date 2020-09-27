@@ -80,18 +80,13 @@ class Vgg16(Sequential):
         return model
 
 
-# Provide the constants for the function. 
-IMAGE_WIDTH = 227
-IMAGE_HEIGHT = 227
-CHANNELS = 3
-NUM_CLASSES = 1000
+if __name__ == '__main__':  
+    # Assign the vlaues 
+    input_shape = (227,227,3)
+    num_classes = 1000
 
-# Assign the vlaues 
-INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
+    # Call the Vgg16  model 
+    model = vgg16(input_shape, num_classes)
 
-
-# Use the model to call the function of build() in the Vgg16 class with the dot syntax
-model = Vgg16.build(INPUT_SHAPE, NUM_CLASSES)
-
-# Show the Vgg16 Model 
-model.summary()
+    # show the full model structure of Vgg16 
+    model.summary()
