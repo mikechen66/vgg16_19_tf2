@@ -80,7 +80,7 @@ if __name__ == '__main__':
     input_shape = (227,227,3)
     
     # Use the model to call the function of build() in the Vgg16 class with the dot syntax
-    model = Vgg16.build(input_shape, num_classes)
+    model = Vgg16().build(input_shape, num_classes)
 
     # Show the Vgg16 Model 
     model.summary()
