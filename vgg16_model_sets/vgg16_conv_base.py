@@ -73,7 +73,8 @@ class Vgg16(object):
         return conv_base
 
 
-# Provide the constants for the function. 
+if __name__ == '__main__':
+    
     # Assign the vlaues 
     num_classes = 1000
     input_shape = (227,227,3)
