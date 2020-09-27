@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# vgg16_model_.py
+# vgg16_simple.py
 
 """
 The script is the self-consistent realization of object-oriented style of the VGG16 model for trhasfer
