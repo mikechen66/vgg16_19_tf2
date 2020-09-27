@@ -14,7 +14,7 @@ model.
 
 Issues:
 
-The script includes deplicated line of code because the function of Concatenate or k.concatenate can 
+The script includes redundant lines of code because the function of Concatenate or k.concatenate can 
 not assembe the abstact layers in the Sequential Model. Therefore, we need to eliminatee the repeated 
 code for elegant realization. 
 
