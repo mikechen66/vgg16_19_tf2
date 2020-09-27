@@ -134,25 +134,19 @@ class Vgg16(object):
             )
 
             return model
+        
+        
+if __name__ == '__main__':
+    
+    # Assign the vlaues 
+    input_shape = (227,227,3)
+    num_classes = 1000
+    # -exclude_fc = False 
+    exclude_fc = True
 
+    # Call the function of build() in the Vgg16 class with the dot syntax
+    conv_base = Vgg16().build(input_shape, num_classes, exclude_fc)
 
-# Provide the constants for the function. 
-IMAGE_WIDTH = 227
-IMAGE_HEIGHT = 227
-CHANNELS = 3
-NUM_CLASSES = 1000
-EXCLUDE_FC = True
-# -EXCLUDE_FC = False
-
-# Assign the vlaues 
-INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
-
-
-# Call the function of build() in the Vgg16 class with the dot syntax
-conv_base = Vgg16.build(INPUT_SHAPE, NUM_CLASSES, EXCLUDE_FC)
-# -model = Vgg16.build(INPUT_SHAPE, NUM_CLASSES, EXCLUDE_FC)
-
-# Show the Vgg16 Model 
-conv_base.summary()
-# -model.summary()
-
+    # Show the Vgg16 Model 
+    # -model.summary()
+    conv_base.summary()
