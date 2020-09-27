@@ -63,20 +63,15 @@ class Vgg16(Sequential):
         self.add(Dense(units=4096, activation="relu"))
         self.add(Dense(units=num_classes, activation="softmax"))
 
+        
+if __name__ == '__main__':  
+    
+    # Assign the vlaues 
+    input_shape = (150,150,3)
+    num_classes = 1
 
-# Assign the constants 
-IMAGE_WIDTH = 150
-IMAGE_HEIGHT = 150
-CHANNELS = 3
-NUM_CLASSES = 1
-
-
-# Assign the vlaues 
-INPUT_SHAPE = (IMAGE_WIDTH, IMAGE_HEIGHT, CHANNELS)
-
-
-# Call the Vgg16  model 
-model = Vgg16(INPUT_SHAPE, NUM_CLASSES)
-
-# show the full model structure of Vgg16 
-model.summary()
+    # Call the Vgg16  model 
+    model = vgg16(input_shape, num_classes)
+    
+    # show the full model structure of Vgg16 
+    model.summary()
