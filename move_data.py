@@ -1,18 +1,16 @@
+
 # move_data.py
 
 """
 Please download the cats_vs_dogs from kaggle and then conduct the folowing 
 processing. 
-
 1.unzipped train.zip 
 2.Change the name "train" to "kaggle_original_data"
 3.Copy a small ammount data from kaggle_original_data to the base_dir and 
   divide them into train, validation and test sets. 
-
 datasets: 
 https://www.kaggle.com/c/dogs-vs-cats/data
 https://www.tensorflow.org/datasets/catalog/cats_vs_dogs
-
 Reference: 
 The script is extracted from the code of Francois Chollet: Deep Learning with
 Python
@@ -24,19 +22,19 @@ import os, shutil
 # The path to the directory where the original
 # dataset was uncompressed
 original_dataset_dir = '/home/mike/datasets/kaggle_original_data'
-
 # The directory where we will store our smaller dataset
 base_dir = '/home/mike/Documents/keras_vgg16_tf2/cats_and_dogs_small'
 os.mkdir(base_dir)
 
-# Directories for our training,
-# validation and test splits
+
+# Directories for our training, validation and test splits
 train_dir = os.path.join(base_dir, 'train')
 os.mkdir(train_dir)
 validation_dir = os.path.join(base_dir, 'validation')
 os.mkdir(validation_dir)
 test_dir = os.path.join(base_dir, 'test')
 os.mkdir(test_dir)
+
 
 # Directory with our training cat pictures
 train_cats_dir = os.path.join(train_dir, 'cats')
@@ -54,13 +52,14 @@ os.mkdir(validation_cats_dir)
 validation_dogs_dir = os.path.join(validation_dir, 'dogs')
 os.mkdir(validation_dogs_dir)
 
-# Directory with our validation cat pictures
+# Directory with our test cat pictures
 test_cats_dir = os.path.join(test_dir, 'cats')
 os.mkdir(test_cats_dir)
 
-# Directory with our validation dog pictures
+# Directory with our test dog pictures
 test_dogs_dir = os.path.join(test_dir, 'dogs')
 os.mkdir(test_dogs_dir)
+
 
 # Copy first 1000 cat images to train_cats_dir
 fnames = ['cat.{}.jpg'.format(i) for i in range(1000)]
